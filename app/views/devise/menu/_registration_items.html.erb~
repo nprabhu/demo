@@ -1,0 +1,16 @@
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Change Password', edit_user_registration_path) %>
+  </li>
+  <li>
+   <%= link_to 'Edit Profile', edit_profile_path(current_user) %> |
+  </li>
+  <li>
+    <%= link_to 'New Gallery', new_gallery_path %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Register', new_user_registration_path)  %>
+  </li>
+<% end %>
